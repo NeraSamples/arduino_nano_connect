@@ -36,11 +36,11 @@ while True:
     magnitude = normalized_rms(samples)
     print((magnitude,))
 
-	#  mapping mic's level to LED PWM range
+    #  mapping mic's level to LED PWM range
     mapped_value = simpleio.map_range(magnitude, 75 , 300, 0, 65535)
 
-	#  sending mapped value to LED for PWM
+    #  sending mapped value to LED for PWM
     led.duty_cycle = int(mapped_value)
-	#  optional logging for mapped_value
+    #  optional logging for mapped_value
     #  print((mapped_value,))
     time.sleep(0.01)

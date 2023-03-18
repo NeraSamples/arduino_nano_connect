@@ -15,18 +15,17 @@ switch.pull = Pull.UP
 n = 0
 
 while True:
-
-	#  when switch is NOT pressed...
+    #  when switch is NOT pressed...
     if switch.value:
-		#  LED is off
+        #  LED is off
         led.value = False
-	#  when switch is pressed...
+    #  when switch is pressed...
     else:
-		#  LED is on
+        #  LED is on
         led.value = True
-		#  value of n increases by 1
+        #  value of n increases by 1
         n += 1
-		#  n is printed to the REPL
+        #  n is printed to the REPL
         print("led ON %i" % n)
-	#  delay
+    #  delay
     time.sleep(0.01)
